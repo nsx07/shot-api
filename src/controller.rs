@@ -28,9 +28,12 @@ pub fn create(new_shot: Json<ShotInput>) -> Result<Created<Json<Shot>>, Status> 
 }
 
 #[get("/<shot_id>")]
-pub fn read(shot_id: i32) -> Option<Json<Shot>> {
+pub fn read(shot_id: i32) -> Result<Json<Shot>, Status> {
     let connection = &mut database::establish_connection();
-    shot.find(shot_id).first::<Shot>(connection).map(Json).ok()
+    shot.find(shot_id)
+        .first::<Shot>(connection)
+        .map(Json)
+        .map_err(|_| Status::NotFound)
 }
 
 #[put("/<shot_id>", data = "<updated_shot>")]
