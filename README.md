@@ -6,7 +6,6 @@ This project is a Rust application using the Rocket framework for the backend an
 
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Database Configuration
 
