@@ -5,24 +5,7 @@ This project is a Rust application using the Rocket framework for the backend an
 ## Prerequisites
 
 - [Rust](https://www.rust-lang.org/tools/install)
-- [Docker](https://docs.docker.com/get-docker/)
-
-## Database Configuration
-
-1. Ensure Docker is installed and running.
-2. Create a `.env` file at the root of the project with the following content:
-
-   ```env
-   DATABASE_URL=mysql://username:password@localhost:3306/monoshot
-   ```
-
-3. Replace `username` and `password` with your database credentials.
-
-4. Run the following command to start the database via Docker:
-
-   ```sh
-   docker run --name monoshot-mysql -e MYSQL_ROOT_PASSWORD=rootpassword -e MYSQL_DATABASE=monoshot -p 3306:3306 -d mysql:latest
-   ```
+- [MySQL](https://www.mysql.com/downloads/)
 
 ## Running Migrations
 
