@@ -1,7 +1,6 @@
 # Monoshot Project
 
-This project is a Rust application using the Rocket framework for the backend and Diesel as ORM to interact with the MySQL database. The database is managed via Docker.
-
+This project is a Rust application using the Rocket framework for the backend and Diesel as ORM to interact with the MySQL database.
 ## Prerequisites
 
 - [Rust](https://www.rust-lang.org/tools/install)
